@@ -1,0 +1,81 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: azure;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main{
+    display: flex;
+}
+
+.menu{
+    background-color: gray;
+    padding: 40px;
+    padding-top: 20px;
+    padding-right: 80px;
+}
+
+.menu-content{
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.content{
+    text-align: justify;
+    padding: 40px;
+}
+
+.menu button{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+
+    .menu{
+        padding: 20px 20px;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+
+    .menu-activo{
+        transform: translateX(0%);
+    }
+
+    .menu button{
+        display: block;
+        position: absolute;
+        transform: translateX(190px);
+    }
+
+    .menu-content{
+        position: static;
+    }
+
+
+}
